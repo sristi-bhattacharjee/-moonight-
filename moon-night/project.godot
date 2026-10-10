@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="moon night"
-run/main_scene="uid://dcptbymplu3to"
+run/main_scene="uid://cqhhtinohw7ws"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
