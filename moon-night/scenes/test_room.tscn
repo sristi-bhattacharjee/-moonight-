@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cpj0rpkmvj2pa" path="res://assets/chessboardtile.png" id="1_4adyp"]
 [ext_resource type="Script" uid="uid://jsg8q06tb0bj" path="res://scenes/test_room.gd" id="1_h8avn"]
 [ext_resource type="PackedScene" uid="uid://cscco751jr4pm" path="res://characters/player.tscn" id="2_h8avn"]
+[ext_resource type="Texture2D" uid="uid://bn3jl5rc8ha3a" path="res://assets/diagonalchessboard.png" id="3_503t6"]
 [ext_resource type="PackedScene" uid="uid://bp5iegmlw4d3r" path="res://characters/enemy_pawn.tscn" id="4_vqwjj"]
 [ext_resource type="PackedScene" uid="uid://c1mrrbpu6jxd2" path="res://characters/enemy_rook.tscn" id="5_503t6"]
 
@@ -18,19 +19,30 @@ texture_region_size = Vector2i(32, 32)
 2:1/0 = 0
 3:1/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mous7"]
+texture = ExtResource("3_503t6")
+texture_region_size = Vector2i(64, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_6tghx"]
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_vqwjj")
+sources/1 = SubResource("TileSetAtlasSource_mous7")
 
 [node name="TestRoom" type="Node2D" unique_id=364521650]
 script = ExtResource("1_h8avn")
 
 [node name="TileMap" type="TileMapLayer" parent="." unique_id=790043162]
-tile_map_data = PackedByteArray("AAAPAA4AAAAAAAAAAAAQAA0AAAAAAAAAAAARAA4AAAAAAAAAAAARAAwAAAAAAAAAAAAPAAwAAAAAAAAAAAASAA0AAAAAAAAAAAATAA4AAAAAAAAAAAATAAwAAAAAAAAAAAASAAsAAAAAAAAAAAAQAAsAAAAAAAAAAAAQAA4AAAABAAAAAAAPAA0AAAABAAAAAAAQAAwAAAABAAAAAAARAA0AAAABAAAAAAASAAwAAAABAAAAAAASAA4AAAABAAAAAAATAA0AAAABAAAAAAATAAsAAAABAAAAAAARAAsAAAABAAAAAAASAAoAAAABAAAAAAAPAAsAAAABAAAAAAAQAAoAAAABAAAAAAARAAoAAAAAAAAAAAASAAkAAAAAAAAAAAARAAkAAAABAAAAAAA=")
+texture_filter = 1
+skew = 0.7853982
+tile_map_data = PackedByteArray("AAAPAA4AAAAAAAAAAAAQAA0AAAAAAAAAAAARAA4AAAAAAAAAAAARAAwAAAAAAAAAAAAPAAwAAAAAAAAAAAASAA0AAAAAAAAAAAATAA4AAAAAAAAAAAATAAwAAAAAAAAAAAASAAsAAAAAAAAAAAAQAAsAAAAAAAAAAAAQAA4AAAABAAAAAAAPAA0AAAABAAAAAAAQAAwAAAABAAAAAAARAA0AAAABAAAAAAASAAwAAAABAAAAAAASAA4AAAABAAAAAAATAA0AAAABAAAAAAATAAsAAAABAAAAAAARAAsAAAABAAAAAAASAAoAAAABAAAAAAAPAAsAAAABAAAAAAAQAAoAAAABAAAAAAARAAoAAAAAAAAAAAASAAkAAAAAAAAAAAARAAkAAAABAAAAAAAWAA4AAQAAAAAAAAAXAA4AAQABAAAAAAAYAA4AAQAAAAAAAAAZAA4AAQABAAAAAAAYAA0AAQAAAAAAAAAZAA0AAQABAAAAAAAbAA0AAQABAAAAAAAXAA0AAQABAAAAAAAZAAwAAQABAAAAAAAbAAwAAQABAAAAAAAaAA4AAQAAAAAAAAAaAA0AAQAAAAAAAAAcAAwAAQAAAAAAAAAaAAwAAQAAAAAAAAAYAAwAAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_6tghx")
 
 [node name="Player" parent="." unique_id=309696051 instance=ExtResource("2_h8avn")]
-position = Vector2(527, 464)
+position = Vector2(164, 331)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1166839269]
 offset_left = 43.0
@@ -75,7 +87,7 @@ offset_right = 560.0
 offset_bottom = 88.0
 
 [node name="EnemyPawn" parent="." unique_id=423642881 instance=ExtResource("4_vqwjj")]
-position = Vector2(595, 304)
+position = Vector2(340, 278)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=232544127]
 offset = Vector2(480, 0)

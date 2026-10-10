@@ -1,6 +1,7 @@
 extends Enemy
 
 func move():
+	
 	try_move(Vector2i.DOWN)
 	
 func check_for_player() -> bool:
