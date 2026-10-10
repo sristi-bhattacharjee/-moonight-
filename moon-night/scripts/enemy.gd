@@ -1,5 +1,5 @@
 extends Character
 class_name Enemy
 
-func move():
-	pass
+func move() -> bool:
+	return(false)
