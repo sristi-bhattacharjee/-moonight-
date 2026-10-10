@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dcptbymplu3to"]
 
 [ext_resource type="Texture2D" uid="uid://cpj0rpkmvj2pa" path="res://assets/chessboardtile.png" id="1_4adyp"]
+[ext_resource type="Script" uid="uid://jsg8q06tb0bj" path="res://scenes/test_room.gd" id="1_h8avn"]
 [ext_resource type="PackedScene" uid="uid://cscco751jr4pm" path="res://characters/player.tscn" id="2_h8avn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vqwjj"]
@@ -20,6 +21,7 @@ tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_vqwjj")
 
 [node name="TestRoom" type="Node2D" unique_id=364521650]
+script = ExtResource("1_h8avn")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1305569879]
 tile_set = SubResource("TileSet_6tghx")
@@ -28,3 +30,20 @@ layer_0/tile_data = PackedInt32Array(458764, 65536, 0, 524300, 0, 0, 589836, 655
 
 [node name="Player" parent="." unique_id=309696051 instance=ExtResource("2_h8avn")]
 position = Vector2(527, 464)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1166839269]
+offset_left = 43.0
+offset_top = 52.0
+offset_right = 228.0
+offset_bottom = 135.0
+color = Color(0.32926747, 4.3618493e-07, 0.067685, 1)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=483243958]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 29.0
+offset_right = 104.0
+offset_bottom = 78.0
+text = "Steps Left:
+"
+metadata/_edit_use_anchors_ = true

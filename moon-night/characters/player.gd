@@ -10,9 +10,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_left"):
 		global_position += Vector2(-32,0)
+		MainControl.turns += 1
 	elif Input.is_action_just_pressed("ui_right") :
 		global_position += Vector2(32,0)
+		MainControl.turns += 1
 	elif Input.is_action_just_pressed("ui_up") :
 		global_position += Vector2(0,-32)
+		MainControl.turns += 1
 	elif Input.is_action_just_pressed("ui_down"):
 		global_position += Vector2(0,32)
+		MainControl.turns += 1
