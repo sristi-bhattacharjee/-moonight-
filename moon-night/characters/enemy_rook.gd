@@ -1,6 +1,6 @@
 extends Enemy
 
-func move():
+func move() -> bool:
 	var rand = randi_range(1,5)
 	if rand == 1:
 		try_move(Vector2i.DOWN)
@@ -10,6 +10,7 @@ func move():
 		try_move(Vector2i.LEFT)
 	elif rand == 4:
 		try_move(Vector2i.RIGHT)
+	return (false)
 	
 func check_for_player() -> bool:
 	var target_tile: Vector2i = grid_position + Vector2i.DOWN + Vector2i.LEFT
