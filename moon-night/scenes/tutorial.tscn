@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bcymf3g1ha77a"]
+
+[ext_resource type="Script" uid="uid://c26bgv0pnqyyu" path="res://scenes/tutorial.gd" id="1_8ho6b"]
+[ext_resource type="Texture2D" uid="uid://b5r66mdup3jny" path="res://assets/context.webp" id="1_c13y7"]
+
+[node name="Tutorial" type="Node2D" unique_id=1015641969]
+script = ExtResource("1_8ho6b")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=482104767]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2.0266993, 2.32476)
+texture = ExtResource("1_c13y7")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=1654157996]
+layout_mode = 0
+offset_left = 15.78922
+offset_top = 86.03039
+offset_right = 571.78925
+offset_bottom = 213.0304
+scale = Vector2(0.5951261, 1.0048726)
+text = "- use arrow keys to move up, down, diagonally
+- every turn will make the other pieces move as well
+- if another piece moves onto your tile, your character dies
+- you are unable to move onto a tile with a piece other than the vampire
+- your objective is to kill the vampire by moving onto its tile"
+
+[node name="Button" type="Button" parent="TextureRect" unique_id=756509365]
+layout_mode = 0
+offset_left = 189.47064
+offset_top = 216.79657
+offset_right = 266.47064
+offset_bottom = 247.79657
+scale = Vector2(0.74319667, 0.70621115)
+text = "continue"
+
+[connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]

@@ -94,6 +94,6 @@ offset = Vector2(480, 0)
 position_smoothing_speed = 10.0
 
 [node name="EnemyRook" parent="." unique_id=1337431958 instance=ExtResource("5_503t6")]
-position = Vector2(456, 328)
+position = Vector2(296, 320)
 
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]

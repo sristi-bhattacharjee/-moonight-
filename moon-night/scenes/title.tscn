@@ -25,4 +25,24 @@ offset_bottom = 623.768
 text = "Accept
 "
 
+[node name="Button2" type="Button" parent="TextureRect" unique_id=445198946]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.071
+offset_left = 588.09534
+offset_top = 774.946
+offset_right = 563.21533
+offset_bottom = 805.946
+text = "tutorial"
+
+[node name="Button3" type="Button" parent="TextureRect" unique_id=1688201450]
+layout_mode = 0
+offset_left = 588.09534
+offset_top = 844.3441
+offset_right = 652.09534
+offset_bottom = 875.3441
+text = "decline"
+
 [connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TextureRect/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TextureRect/Button3" to="." method="_on_button_3_pressed"]

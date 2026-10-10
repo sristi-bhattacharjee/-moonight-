@@ -23,7 +23,8 @@ func _process(delta: float) -> void:
 	label.text = readout
 	
 	camera_2d.position.y = player.position.y
-	
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()
 
 #button -> game over
 

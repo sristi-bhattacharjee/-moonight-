@@ -28,7 +28,10 @@ func try_move(direction: Vector2i) -> bool:
 	# Don't move into an empty cell.
 	if tile_map.get_cell_source_id(target_tile) == -1:
 		return(false)
-
+	for kid in test_room.get_children():
+		if kid is Enemy:
+			if target_tile == kid.grid_position:
+				return(false)
 	grid_position = target_tile
 	is_moving = true
 
