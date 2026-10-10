@@ -47,3 +47,29 @@ offset_bottom = 78.0
 text = "Steps Left:
 "
 metadata/_edit_use_anchors_ = true
+
+[node name="game over" type="Node2D" parent="." unique_id=1136412309]
+
+[node name="ColorRect" type="ColorRect" parent="game over" unique_id=1439631605]
+offset_left = 136.0
+offset_top = 128.0
+offset_right = 458.0
+offset_bottom = 367.0
+color = Color(0.6886413, 0.12828916, 0, 1)
+
+[node name="Label" type="Label" parent="game over/ColorRect" unique_id=1674221726]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 102.0
+offset_right = 238.0
+offset_bottom = 141.0
+theme_override_font_sizes/font_size = 28
+text = "GAME OVER"
+
+[node name="CheckButton" type="CheckButton" parent="." unique_id=362309883]
+offset_left = 440.0
+offset_top = 64.0
+offset_right = 560.0
+offset_bottom = 88.0
+
+[connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
