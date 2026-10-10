@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://jsg8q06tb0bj" path="res://scenes/test_room.gd" id="1_h8avn"]
 [ext_resource type="PackedScene" uid="uid://cscco751jr4pm" path="res://characters/player.tscn" id="2_h8avn"]
 [ext_resource type="PackedScene" uid="uid://bp5iegmlw4d3r" path="res://characters/enemy_pawn.tscn" id="4_vqwjj"]
+[ext_resource type="PackedScene" uid="uid://c1mrrbpu6jxd2" path="res://characters/enemy_rook.tscn" id="5_503t6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vqwjj"]
 texture = ExtResource("1_4adyp")
@@ -49,20 +50,21 @@ text = "Steps Left:
 metadata/_edit_use_anchors_ = true
 
 [node name="game over" type="Node2D" parent="." unique_id=1136412309]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="game over" unique_id=1439631605]
-offset_left = 136.0
-offset_top = 128.0
-offset_right = 458.0
-offset_bottom = 367.0
+offset_left = 32.0
+offset_top = 48.0
+offset_right = 648.0
+offset_bottom = 496.0
 color = Color(0.6886413, 0.12828916, 0, 1)
 
 [node name="Label" type="Label" parent="game over/ColorRect" unique_id=1674221726]
 layout_mode = 0
-offset_left = 78.0
-offset_top = 102.0
-offset_right = 238.0
-offset_bottom = 141.0
+offset_left = 216.0
+offset_top = 200.0
+offset_right = 376.0
+offset_bottom = 239.0
 theme_override_font_sizes/font_size = 28
 text = "GAME OVER"
 
@@ -80,5 +82,8 @@ offset = Vector2(480, 0)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 rotation_smoothing_enabled = true
+
+[node name="EnemyRook" parent="." unique_id=1337431958 instance=ExtResource("5_503t6")]
+position = Vector2(560, 464)
 
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]

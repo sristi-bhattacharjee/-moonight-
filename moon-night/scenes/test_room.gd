@@ -3,7 +3,7 @@ extends Node2D
 @onready var label: Label = $ColorRect/Label
 @onready var my_node: Node = $"game over"
 @onready var button: CheckButton = $CheckButton
-var switch = true
+var switch = false
 	
 @onready var camera_2d: Camera2D = $Camera2D
 @onready var player: Node2D = $Player
