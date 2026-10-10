@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://dcptbymplu3to"]
+[gd_scene format=4 uid="uid://dcptbymplu3to"]
 
 [ext_resource type="Texture2D" uid="uid://cpj0rpkmvj2pa" path="res://assets/chessboardtile.png" id="1_4adyp"]
 [ext_resource type="Script" uid="uid://jsg8q06tb0bj" path="res://scenes/test_room.gd" id="1_h8avn"]
 [ext_resource type="PackedScene" uid="uid://cscco751jr4pm" path="res://characters/player.tscn" id="2_h8avn"]
+[ext_resource type="PackedScene" uid="uid://bp5iegmlw4d3r" path="res://characters/enemy_pawn.tscn" id="4_vqwjj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vqwjj"]
 texture = ExtResource("1_4adyp")
@@ -23,10 +24,9 @@ sources/0 = SubResource("TileSetAtlasSource_vqwjj")
 [node name="TestRoom" type="Node2D" unique_id=364521650]
 script = ExtResource("1_h8avn")
 
-[node name="TileMap" type="TileMap" parent="." unique_id=1305569879]
+[node name="TileMap" type="TileMapLayer" parent="." unique_id=790043162]
+tile_map_data = PackedByteArray("AAAPAA4AAAAAAAAAAAAQAA0AAAAAAAAAAAARAA4AAAAAAAAAAAARAAwAAAAAAAAAAAAPAAwAAAAAAAAAAAASAA0AAAAAAAAAAAATAA4AAAAAAAAAAAATAAwAAAAAAAAAAAASAAsAAAAAAAAAAAAQAAsAAAAAAAAAAAAQAA4AAAABAAAAAAAPAA0AAAABAAAAAAAQAAwAAAABAAAAAAARAA0AAAABAAAAAAASAAwAAAABAAAAAAASAA4AAAABAAAAAAATAA0AAAABAAAAAAATAAsAAAABAAAAAAARAAsAAAABAAAAAAASAAoAAAABAAAAAAAPAAsAAAABAAAAAAAQAAoAAAABAAAAAAARAAoAAAAAAAAAAAASAAkAAAAAAAAAAAARAAkAAAABAAAAAAA=")
 tile_set = SubResource("TileSet_6tghx")
-format = 2
-layer_0/tile_data = PackedInt32Array(458764, 65536, 0, 524300, 0, 0, 589836, 65536, 0, 655372, 0, 0, 720908, 65536, 0, 786444, 0, 0, 851980, 65536, 0, 917516, 0, 0, 458765, 0, 0, 524301, 65536, 0, 589837, 0, 0, 655373, 65536, 0, 720909, 0, 0, 786445, 65536, 0, 851981, 0, 0, 917517, 65536, 0, 458766, 65536, 0, 524302, 0, 0, 589838, 65536, 0, 655374, 0, 0, 720910, 65536, 0, 786446, 0, 0, 851982, 65536, 0, 917518, 0, 0, 458767, 0, 0, 524303, 65536, 0, 589839, 0, 0, 655375, 65536, 0, 720911, 0, 0, 786447, 65536, 0, 851983, 0, 0, 917519, 65536, 0, 458768, 65536, 0, 524304, 0, 0, 589840, 65536, 0, 655376, 0, 0, 720912, 65536, 0, 786448, 0, 0, 851984, 65536, 0, 917520, 0, 0, 458769, 0, 0, 524305, 65536, 0, 589841, 0, 0, 655377, 65536, 0, 720913, 0, 0, 786449, 65536, 0, 851985, 0, 0, 917521, 65536, 0, 458770, 65536, 0, 524306, 0, 0, 589842, 65536, 0, 655378, 0, 0, 720914, 65536, 0, 786450, 0, 0, 851986, 65536, 0, 917522, 0, 0, 458771, 0, 0, 524307, 65536, 0, 589843, 0, 0, 655379, 65536, 0, 720915, 0, 0, 786451, 65536, 0, 851987, 0, 0, 917523, 65536, 0, 458772, 65536, 0, 524308, 0, 0, 589844, 65536, 0, 655380, 0, 0, 720916, 65536, 0, 786452, 0, 0, 851988, 65536, 0, 917524, 0, 0, 458773, 0, 0, 524309, 65536, 0, 589845, 0, 0, 655381, 65536, 0, 720917, 0, 0, 786453, 65536, 0, 851989, 0, 0, 917525, 65536, 0, 720904, 0, 0, 786440, 0, 0, 851976, 0, 0, 786441, 0, 0, 786442, 0, 0, 851977, 0, 0, 917512, 65536, 0, 983048, 0, 0, 1048584, 0, 0, 1114121, 65536, 0, 1114122, 0, 0, 1048585, 0, 0, 983047, 0, 0, 983046, 65536, 0, 983045, 65536, 0, 983044, 65536, 0, 1048580, 65536, 0, 1048581, 0, 0, 1048582, 65536, 0, 1048583, 65536, 0, 917511, 65536, 0, 851975, 65536, 0, 786438, 65536, 0, 786437, 65536, 0, 851973, 65536, 0, 917510, 65536, 0, 1114118, 65536, 0, 1179655, 65536, 0, 1179656, 65536, 0, 1179657, 65536, 0, 1114120, 65536, 0, 1114119, 65536, 0, 1048579, 65536, 0, 1114114, 65536, 0)
 
 [node name="Player" parent="." unique_id=309696051 instance=ExtResource("2_h8avn")]
 position = Vector2(527, 464)
@@ -71,5 +71,14 @@ offset_left = 440.0
 offset_top = 64.0
 offset_right = 560.0
 offset_bottom = 88.0
+
+[node name="EnemyPawn" parent="." unique_id=423642881 instance=ExtResource("4_vqwjj")]
+position = Vector2(595, 304)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=232544127]
+offset = Vector2(480, 0)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+rotation_smoothing_enabled = true
 
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]

@@ -5,6 +5,12 @@ extends Node2D
 @onready var button: CheckButton = $CheckButton
 var switch = true
 	
+@onready var camera_2d: Camera2D = $Camera2D
+@onready var player: Node2D = $Player
+@export var turns_till_enemies_move : int = 1
+var gameover = false
+
+var player_turns = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -16,6 +22,7 @@ func _process(delta: float) -> void:
 	var readout = "Steps Remaining: %s" % steps_left
 	label.text = readout
 	
+	camera_2d.position.y = player.position.y
 	
 
 #button -> game over
@@ -28,3 +35,14 @@ func _on_check_button_pressed() -> void:
 		my_node.show()
 		switch = true
 	
+
+func countDown():
+	player_turns += 1
+	if player_turns == turns_till_enemies_move:
+		move_enemies()
+		player_turns = 0
+
+func move_enemies():
+	for kid in get_children():
+		if kid is Enemy:
+			kid.move()
