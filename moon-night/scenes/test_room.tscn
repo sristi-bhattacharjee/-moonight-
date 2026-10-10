@@ -89,6 +89,12 @@ offset_bottom = 88.0
 [node name="EnemyPawn" parent="." unique_id=423642881 instance=ExtResource("4_vqwjj")]
 position = Vector2(296, 259)
 
+[node name="EnemyPawn3" parent="." unique_id=1456335718 instance=ExtResource("4_vqwjj")]
+position = Vector2(351, 239)
+
+[node name="EnemyPawn4" parent="." unique_id=706990140 instance=ExtResource("4_vqwjj")]
+position = Vector2(331, 259)
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=232544127]
 offset = Vector2(480, 0)
 position_smoothing_speed = 10.0
