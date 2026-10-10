@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="ChessMove" format=3 uid="uid://dwsmco7s5vtgv"]
+
+[ext_resource type="Script" uid="uid://baec4ksrlop5o" path="res://scripts/chessmove.gd" id="1_4cvc2"]
+
+[resource]
+script = ExtResource("1_4cvc2")

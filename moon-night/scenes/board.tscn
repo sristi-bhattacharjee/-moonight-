@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cs5rtl7fgxe2"]
+
+[sub_resource type="GDScript" id="GDScript_id3w2"]
+script/source = "extends Node2D
+
+var tiles: Array[Vector2i]
+var units: Array[Vector2i]
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Board" type="Node2D" unique_id=933949393]
+script = SubResource("GDScript_id3w2")

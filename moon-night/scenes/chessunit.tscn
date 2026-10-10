@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://btislilhvnpib"]
+
+[ext_resource type="Script" uid="uid://djk8tchgiu5aa" path="res://scripts/chessunit.gd" id="1_x60mi"]
+
+[node name="ChessUnit" type="Node2D" unique_id=1974780249]
+script = ExtResource("1_x60mi")
