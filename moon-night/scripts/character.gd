@@ -11,7 +11,7 @@ func _ready() -> void:
 	grid_position = tile_map.local_to_map(
 		tile_map.to_local(global_position)
 	)
-	snap_to_grid()
+	snap_to_grid() #add victory screen, fix blurriness
 
 
 func snap_to_grid() -> void:
