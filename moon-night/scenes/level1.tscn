@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bghve1tnc2o02" path="res://assets/singlewall.png" id="6_jvkml"]
 [ext_resource type="PackedScene" uid="uid://cscco751jr4pm" path="res://characters/player.tscn" id="7_3w4mx"]
 [ext_resource type="PackedScene" uid="uid://bp5iegmlw4d3r" path="res://characters/enemy_pawn.tscn" id="8_u068y"]
-[ext_resource type="PackedScene" uid="uid://ctkvavyojc67f" path="res://characters/enemy_vampire.tscn" id="10_ai3nx"]
+[ext_resource type="PackedScene" uid="uid://cee2rv3rkagr0" path="res://characters/enemy_vampire.tscn" id="10_ai3nx"]
 [ext_resource type="Texture2D" uid="uid://dmpmy6ojcxd2f" path="res://assets/gameover.png" id="11_gnai3"]
 [ext_resource type="Texture2D" uid="uid://brg173y7fn0p4" path="res://assets/fancy-6lhrf9qwakc4p2g2.webp" id="12_3oqy1"]
 [ext_resource type="PackedScene" uid="uid://c1mrrbpu6jxd2" path="res://characters/enemy_rook.tscn" id="13_f31uk"]

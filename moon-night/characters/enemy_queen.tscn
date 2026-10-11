@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://buk0c7txl07uq"]
+
+[ext_resource type="Script" uid="uid://dumi8bboroqgv" path="res://characters/enemy_queen.gd" id="1_rm0pa"]
+[ext_resource type="Texture2D" uid="uid://b6t1nkhypdea1" path="res://assets/queen.webp" id="2_4i8cu"]
+
+[node name="EnemyQueen" type="Node2D" unique_id=423642881]
+script = ExtResource("1_rm0pa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1434532722]
+texture_filter = 2
+position = Vector2(-4, -38)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_4i8cu")
