@@ -8,6 +8,8 @@ func _process(_delta: float) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	if MainControl.frozen:
+		return
 	if is_moving:
 		return
 

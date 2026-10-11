@@ -78,17 +78,21 @@ position = Vector2(351, 239)
 [node name="EnemyPawn4" parent="." unique_id=706990140 instance=ExtResource("4_vqwjj")]
 position = Vector2(331, 259)
 
+[node name="EnemyRook" parent="." unique_id=1337431958 instance=ExtResource("5_503t6")]
+position = Vector2(296, 320)
+
+[node name="EnemyVampire" parent="." unique_id=439461791 instance=ExtResource("7_sg3ht")]
+position = Vector2(339, 218)
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=232544127]
 offset = Vector2(480, 0)
 position_smoothing_speed = 10.0
 
-[node name="EnemyRook" parent="." unique_id=1337431958 instance=ExtResource("5_503t6")]
-position = Vector2(296, 320)
-
-[node name="game over" type="Node2D" parent="." unique_id=1136412309]
+[node name="game over" type="Node2D" parent="Camera2D" unique_id=1136412309]
 visible = false
+position = Vector2(0, -294.01)
 
-[node name="ColorRect" type="ColorRect" parent="game over" unique_id=1439631605]
+[node name="ColorRect" type="ColorRect" parent="Camera2D/game over" unique_id=1439631605]
 offset_left = -8.0
 offset_top = 8.000004
 offset_right = 608.0
@@ -96,7 +100,7 @@ offset_bottom = 456.0
 scale = Vector2(1.6238722, 1.3787202)
 color = Color(0.6886413, 0.12828916, 0, 1)
 
-[node name="Label" type="Label" parent="game over/ColorRect" unique_id=1674221726]
+[node name="Label" type="Label" parent="Camera2D/game over/ColorRect" unique_id=1674221726]
 layout_mode = 0
 offset_left = 216.0
 offset_top = 200.0
@@ -105,7 +109,7 @@ offset_bottom = 239.0
 theme_override_font_sizes/font_size = 28
 text = "GAME OVER"
 
-[node name="Button" type="Button" parent="game over/ColorRect" unique_id=400652634]
+[node name="Button" type="Button" parent="Camera2D/game over/ColorRect" unique_id=400652634]
 layout_mode = 0
 offset_left = 264.0
 offset_top = 280.0
@@ -114,7 +118,7 @@ offset_bottom = 311.0
 scale = Vector2(1.1538681, 1)
 text = "RETRY"
 
-[node name="Button2" type="Button" parent="game over/ColorRect" unique_id=966837582]
+[node name="Button2" type="Button" parent="Camera2D/game over/ColorRect" unique_id=966837582]
 layout_mode = 0
 offset_left = 275.8838
 offset_top = 319.13654
@@ -122,9 +126,47 @@ offset_right = 322.8838
 offset_bottom = 350.13654
 text = "QUIT"
 
-[node name="EnemyVampire" parent="." unique_id=439461791 instance=ExtResource("7_sg3ht")]
-position = Vector2(339, 218)
+[node name="Victory" type="Node2D" parent="Camera2D" unique_id=175244768]
+visible = false
+position = Vector2(0, -294.01)
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/Victory" unique_id=214760811]
+offset_left = -8.0
+offset_top = 8.000004
+offset_right = 608.0
+offset_bottom = 456.0
+scale = Vector2(1.6238722, 1.3787202)
+color = Color(0.25198132, 0.4372424, 0, 1)
+
+[node name="Label" type="Label" parent="Camera2D/Victory/ColorRect" unique_id=801597454]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 200.0
+offset_right = 376.0
+offset_bottom = 239.0
+theme_override_font_sizes/font_size = 28
+text = "VICTORY"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Camera2D/Victory/ColorRect" unique_id=1580864653]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 280.0
+offset_right = 320.0
+offset_bottom = 311.0
+scale = Vector2(1.1538681, 1)
+text = "RETRY"
+
+[node name="Button2" type="Button" parent="Camera2D/Victory/ColorRect" unique_id=615431992]
+layout_mode = 0
+offset_left = 275.8838
+offset_top = 319.13654
+offset_right = 322.8838
+offset_bottom = 350.13654
+text = "QUIT"
 
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
-[connection signal="pressed" from="game over/ColorRect/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="game over/ColorRect/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Camera2D/game over/ColorRect/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Camera2D/game over/ColorRect/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Camera2D/Victory/ColorRect/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Camera2D/Victory/ColorRect/Button2" to="." method="_on_button_2_pressed"]

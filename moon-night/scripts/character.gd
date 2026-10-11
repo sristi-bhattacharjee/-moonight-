@@ -31,6 +31,9 @@ func try_move(direction: Vector2i) -> bool:
 	for kid in test_room.get_children():
 		if kid is Enemy:
 			if target_tile == kid.grid_position:
+				if kid is Vampire:
+					test_room.display_victory()
+					break
 				return(false)
 	grid_position = target_tile
 	is_moving = true

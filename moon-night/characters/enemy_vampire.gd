@@ -1,6 +1,6 @@
 
 extends Enemy
-
+class_name Vampire
 
 func choose_move() -> Vector2i:
 	var player_position := check_for_player()
@@ -9,6 +9,8 @@ func choose_move() -> Vector2i:
 	while unsafe:
 		random_dir = movements[randi() % movements.size()]
 		if (grid_position+ random_dir) == MainControl.player.grid_position:
+			unsafe = true
+		elif test_room.tile_map.get_cell_source_id(grid_position + random_dir) == -1:
 			unsafe = true
 		else: 
 			unsafe = false

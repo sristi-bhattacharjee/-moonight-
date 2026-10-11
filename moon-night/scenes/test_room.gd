@@ -1,7 +1,8 @@
 extends Node2D
-
 @onready var label: Label = $ColorRect/Label
-@onready var my_node: Node = $"game over"
+@onready var my_node: Node = $"Camera2D/game over"
+@onready var victoryScreen: Node2D = $Camera2D/Victory
+
 @onready var button: CheckButton = $CheckButton
 var switch = false
 @onready var tile_map: TileMapLayer = $TileMap
@@ -9,12 +10,12 @@ var switch = false
 @onready var player: Node2D = $Player
 @export var turns_till_enemies_move : int = 1
 var gameover = false
-
+var victory = true
 var player_turns = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	MainControl.player = $Player
-
+	MainControl.frozen = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -34,11 +35,13 @@ func _on_check_button_pressed() -> void:
 	else:
 		my_node.show()
 		switch = true
-	
+func display_victory() -> void:
+	MainControl.frozen = true
+	victoryScreen.show()
 
 func countDown():
 	player_turns += 1
-	if player_turns == turns_till_enemies_move:
+	if player_turns == turns_till_enemies_move and !MainControl.frozen:
 		move_enemies()
 		player_turns = 0
 
@@ -53,13 +56,14 @@ func move_enemies() -> void:
 	# Plan everyones moves first
 	var plans: Dictionary = {}
 
-	for enemy in enemies:
+	for enemy in enemies: #TODO: make vampire redo move if it'll collide with an enemy
 		var direction: Vector2i = enemy.choose_move()
 		var destination: Vector2i = enemy.grid_position + direction
-		#make it so that running into pawns doesn't kill you
+		#make it so that pawns cant kill you by moving forward
 		if destination == MainControl.player.grid_position:
 			gameover = true
 			switch = false
+			MainControl.frozen = true
 			_on_check_button_pressed()
 			return
 
