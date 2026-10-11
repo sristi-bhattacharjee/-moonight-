@@ -1,17 +1,31 @@
 
 extends Enemy
+class_name Pawn
 
 #TODO: make it so that enemies bounce when they hit eachother
 
-func choose_move() -> Vector2i:
-	var player_direction := check_for_player()
 
+
+
+func choose_move() -> Vector2i:
+	var forward_tile: Vector2i = grid_position + stored_dir
+
+	# Reverse if the tile ahead is outside the map.
+	if test_room.tile_map.get_cell_source_id(forward_tile) == -1:
+		reverse_direction()
+		forward_tile = grid_position + stored_dir
+
+	# Always check the player in the current direction,
+	# including immediately after reversing.
+	if forward_tile == MainControl.player.grid_position:
+		return Vector2i.ZERO
+
+	# Check for a diagonal attack.
+	var player_direction := check_for_player()
 	if player_direction != Vector2i.ZERO:
 		return player_direction
-	if test_room.tile_map.get_cell_source_id(grid_position + stored_dir) == -1:
-		reverse_direction()
-	return stored_dir
 
+	return stored_dir
 
 func check_for_player() -> Vector2i:
 	# Rotate forward 90 degrees to get left and right

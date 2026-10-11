@@ -5,7 +5,7 @@ var shift := false
 
 func _process(_delta: float) -> void:
 	shift = Input.is_key_pressed(KEY_SHIFT)
-
+	print(shift)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if MainControl.frozen:

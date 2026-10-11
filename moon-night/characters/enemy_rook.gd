@@ -8,7 +8,8 @@ var directions: Array[Vector2i] = [
 	Vector2i.UP  
 ]
 
-var direction_index: int = 0
+@onready var direction_index: int = current_direction
+
 
 func choose_move() -> Vector2i:
 	var direction: Vector2i = directions[direction_index]
