@@ -9,11 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://cj1bill4symie" path="res://assets/wall.png" id="4_xsufa"]
 [ext_resource type="PackedScene" uid="uid://c1mrrbpu6jxd2" path="res://characters/enemy_rook.tscn" id="5_503t6"]
 [ext_resource type="Texture2D" uid="uid://bghve1tnc2o02" path="res://assets/singlewall.png" id="6_w86v4"]
-[ext_resource type="PackedScene" uid="uid://cee2rv3rkagr0" path="res://characters/enemy_vampire.tscn" id="7_sg3ht"]
-[ext_resource type="Texture2D" uid="uid://clu1xoe3w2p7c" path="res://assets/image.webp" id="8_jumof"]
+[ext_resource type="PackedScene" uid="uid://ctkvavyojc67f" path="res://characters/enemy_vampire.tscn" id="7_sg3ht"]
 [ext_resource type="FontFile" uid="uid://ttpjsxxl73it" path="res://font/CloisterBlack.ttf" id="9_xsufa"]
 [ext_resource type="PackedScene" uid="uid://ttj1ihd5l1iq" path="res://characters/enemy_bishop.tscn" id="11_p0w5i"]
 [ext_resource type="Texture2D" uid="uid://brg173y7fn0p4" path="res://assets/fancy-6lhrf9qwakc4p2g2.webp" id="12_l3qxk"]
+[ext_resource type="Texture2D" uid="uid://dp5xqv2xkv6ym" path="res://assets/gameover.webp" id="13_l3qxk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vqwjj"]
 texture = ExtResource("1_4adyp")
@@ -426,7 +426,7 @@ offset_left = -16.0
 offset_top = -25.98999
 offset_right = 984.0
 offset_bottom = 612.02
-texture = ExtResource("8_jumof")
+texture = ExtResource("13_l3qxk")
 
 [node name="Label" type="Label" parent="Camera2D/game over/TextureRect" unique_id=1674221726]
 layout_mode = 0

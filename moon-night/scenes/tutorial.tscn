@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bcymf3g1ha77a"]
 
 [ext_resource type="Script" uid="uid://c26bgv0pnqyyu" path="res://scenes/tutorial.gd" id="1_8ho6b"]
-[ext_resource type="Texture2D" uid="uid://b5r66mdup3jny" path="res://assets/context.webp" id="1_c13y7"]
+[ext_resource type="Texture2D" uid="uid://bc27ucpi8twh6" path="res://assets/tut.webp" id="2_ph3nu"]
+[ext_resource type="FontFile" uid="uid://coc8gh1opj58j" path="res://font/HellghostRough-Regular.ttf" id="3_ph3nu"]
 
 [node name="Tutorial" type="Control" unique_id=97381416]
 layout_mode = 3
@@ -20,28 +21,35 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_c13y7")
+texture = ExtResource("2_ph3nu")
 expand_mode = 2
 
 [node name="Label" type="Label" parent="TextureRect" unique_id=1654157996]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 404.0
-offset_right = 561.0
-offset_bottom = 531.0
+offset_left = 832.0
+offset_top = 128.0
+offset_right = 1388.0
+offset_bottom = 505.0
 scale = Vector2(2.56, 2.56)
-text = "- use arrow keys to move up, down, diagonally
-- every turn will make the other pieces move as well
-- if another piece moves onto your tile, your character dies
-- you are unable to move onto a tile with a piece other than the vampire
-- your objective is to kill the vampire by moving onto its tile"
+theme_override_fonts/font = ExtResource("3_ph3nu")
+theme_override_font_sizes/font_size = 21
+text = "use arrow keys to move up, down, diagonally
+- every turn will make the other
+ pieces move as well
+- if another piece moves onto
+your tile, your character dies
+- you are unable to move onto
+ a tile with a piece other
+ than the vampire
+- your objective is to kill the vampire by moving
+ onto its tile"
 
 [node name="Button" type="Button" parent="TextureRect" unique_id=756509365]
 layout_mode = 0
-offset_left = 653.0
-offset_top = 768.0
-offset_right = 743.0
-offset_bottom = 799.0
+offset_left = 1688.0
+offset_top = 1120.0
+offset_right = 1778.0
+offset_bottom = 1151.0
 scale = Vector2(2.56, 2.56)
 theme_override_colors/font_color = Color(0.9764706, 0.8862745, 0, 1)
 text = "continue..."
