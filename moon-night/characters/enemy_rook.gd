@@ -1,21 +1,21 @@
 extends Enemy
 
 func move() -> bool:
-	var player_position = check_for_player()
-	if player_position != Vector2i(0,0):
+	"""var player_position = check_for_player()
+	if "player_position != Vector2i(0,0):
 		try_move(player_position)
 		return(true)
-	else:
-		var rand = randi_range(1,5)
-		if rand == 1:
-			try_move(Vector2i.DOWN)
-		elif rand == 2:
-			try_move(Vector2i.UP)
-		elif rand == 3:
-			try_move(Vector2i.LEFT)
-		elif rand == 4:
-			try_move(Vector2i.RIGHT)
-		return (false)
+	else:"""
+	var rand = randi_range(1,5)
+	if rand == 1:
+		try_move(Vector2i.DOWN)
+	elif rand == 2:
+		try_move(Vector2i.UP)
+	elif rand == 3:
+		try_move(Vector2i.LEFT)
+	elif rand == 4:
+		try_move(Vector2i.RIGHT)
+	return (false)
 		
 		
 		

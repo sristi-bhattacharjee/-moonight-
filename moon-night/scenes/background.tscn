@@ -37,6 +37,7 @@ offset_left = 233.9518
 offset_top = 114.41686
 offset_right = 319.95178
 offset_bottom = 145.41687
+theme_override_colors/font_color = Color(0.9777891, 0.88636744, 0, 1)
 theme_override_font_sizes/font_size = 15
 text = "continue..."
 flat = true

@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bp5iegmlw4d3r" path="res://characters/enemy_pawn.tscn" id="4_vqwjj"]
 [ext_resource type="PackedScene" uid="uid://c1mrrbpu6jxd2" path="res://characters/enemy_rook.tscn" id="5_503t6"]
 [ext_resource type="PackedScene" uid="uid://ctkvavyojc67f" path="res://characters/enemy_vampire.tscn" id="7_sg3ht"]
+[ext_resource type="Texture2D" uid="uid://clu1xoe3w2p7c" path="res://assets/image.webp" id="8_jumof"]
+[ext_resource type="FontFile" uid="uid://ttpjsxxl73it" path="res://font/CloisterBlack.ttf" id="9_xsufa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vqwjj"]
 texture = ExtResource("1_4adyp")
@@ -115,7 +117,6 @@ position = Vector2(924, -146)
 position_smoothing_speed = 10.0
 
 [node name="game over" type="Node2D" parent="Camera2D" unique_id=1136412309]
-visible = false
 position = Vector2(-480, -294.01)
 
 [node name="ColorRect" type="ColorRect" parent="Camera2D/game over" unique_id=1439631605]
@@ -124,33 +125,46 @@ offset_top = 8.000004
 offset_right = 608.0
 offset_bottom = 456.0
 scale = Vector2(1.6238722, 1.3787202)
-color = Color(0.6886413, 0.12828916, 0, 1)
+color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="Camera2D/game over/ColorRect" unique_id=1674221726]
+[node name="TextureRect" type="TextureRect" parent="Camera2D/game over" unique_id=1397705770]
+offset_left = -16.0
+offset_top = -25.98999
+offset_right = 984.0
+offset_bottom = 612.02
+texture = ExtResource("8_jumof")
+
+[node name="Label" type="Label" parent="Camera2D/game over/TextureRect" unique_id=1674221726]
 layout_mode = 0
-offset_left = 216.0
-offset_top = 200.0
-offset_right = 376.0
-offset_bottom = 239.0
-theme_override_font_sizes/font_size = 28
+offset_left = 342.75638
+offset_top = 283.74402
+offset_right = 502.75638
+offset_bottom = 322.74402
+theme_override_colors/font_color = Color(0.6666667, 0.007843138, 0.007843138, 1)
+theme_override_fonts/font = ExtResource("9_xsufa")
+theme_override_font_sizes/font_size = 58
 text = "GAME OVER"
 
-[node name="Button" type="Button" parent="Camera2D/game over/ColorRect" unique_id=400652634]
+[node name="Button2" type="Button" parent="Camera2D/game over/TextureRect" unique_id=966837582]
 layout_mode = 0
-offset_left = 264.0
-offset_top = 280.0
-offset_right = 320.0
-offset_bottom = 311.0
-scale = Vector2(1.1538681, 1)
-text = "RETRY"
-
-[node name="Button2" type="Button" parent="Camera2D/game over/ColorRect" unique_id=966837582]
-layout_mode = 0
-offset_left = 275.8838
-offset_top = 319.13654
-offset_right = 322.8838
-offset_bottom = 350.13654
+offset_left = 488.0
+offset_top = 440.0
+offset_right = 543.0
+offset_bottom = 471.0
+theme_override_colors/font_color = Color(0.6666667, 0.007843138, 0.007843138, 1)
 text = "QUIT"
+flat = true
+
+[node name="Button" type="Button" parent="Camera2D/game over/TextureRect" unique_id=400652634]
+layout_mode = 0
+offset_left = 480.00003
+offset_top = 392.0
+offset_right = 536.0
+offset_bottom = 423.0
+scale = Vector2(1.1538681, 1)
+theme_override_colors/font_color = Color(0.6666667, 0.007843138, 0.007843138, 1)
+text = "RETRY"
+flat = true
 
 [node name="Victory" type="Node2D" parent="Camera2D" unique_id=175244768]
 visible = false
@@ -192,7 +206,7 @@ offset_bottom = 350.13654
 text = "QUIT"
 
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
-[connection signal="pressed" from="Camera2D/game over/ColorRect/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Camera2D/game over/ColorRect/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Camera2D/game over/TextureRect/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Camera2D/game over/TextureRect/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Camera2D/Victory/ColorRect/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Camera2D/Victory/ColorRect/Button2" to="." method="_on_button_2_pressed"]
