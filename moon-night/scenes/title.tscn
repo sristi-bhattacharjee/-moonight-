@@ -1,16 +1,18 @@
 [gd_scene format=3 uid="uid://cqhhtinohw7ws"]
 
-[ext_resource type="Texture2D" uid="uid://d0efkkicf6lc" path="res://assets/Untitled_Artwork.webp" id="1_4ignj"]
+[ext_resource type="Texture2D" uid="uid://be6pvvfkmgl51" path="res://assets/Untitled_Artwork.webp" id="1_4ignj"]
 [ext_resource type="Script" uid="uid://c5twbgqkgv4or" path="res://scenes/title.gd" id="1_wosw1"]
+[ext_resource type="FontFile" uid="uid://b2gnsejg8ii2d" path="res://font/Runethia.otf" id="3_p6dhs"]
+[ext_resource type="FontFile" uid="uid://ttpjsxxl73it" path="res://font/CloisterBlack.ttf" id="4_pyl7j"]
 
 [node name="Title" type="Node2D" unique_id=1877606618]
 script = ExtResource("1_wosw1")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1282974300]
-offset_top = -16.0
+offset_top = -8.0
 offset_right = 1280.0
-offset_bottom = 888.0
-scale = Vector2(0.7889877, 0.6916611)
+offset_bottom = 896.0
+scale = Vector2(0.75472736, 0.68166476)
 texture = ExtResource("1_4ignj")
 
 [node name="Button" type="Button" parent="TextureRect" unique_id=943618059]
@@ -18,30 +20,64 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.13700001
 anchor_bottom = 0.133
-offset_left = 576.0
-offset_top = 680.0
-offset_right = 496.63998
-offset_bottom = 623.768
+offset_left = 593.59186
+offset_top = 668.9505
+offset_right = 514.2318
+offset_bottom = 612.7185
+theme_override_colors/font_color = Color(0.68235296, 0.47058824, 0, 1)
+theme_override_fonts/font = ExtResource("4_pyl7j")
+theme_override_font_sizes/font_size = 40
 text = "Accept
 "
+flat = true
 
 [node name="Button2" type="Button" parent="TextureRect" unique_id=445198946]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.071
-offset_left = 588.09534
-offset_top = 774.946
-offset_right = 563.21533
-offset_bottom = 805.946
-text = "tutorial"
+offset_left = 582.99194
+offset_top = 739.36633
+offset_right = 625.11194
+offset_bottom = 795.36633
+theme_override_colors/font_color = Color(0.68235296, 0.47058824, 0, 1)
+theme_override_fonts/font = ExtResource("4_pyl7j")
+theme_override_font_sizes/font_size = 40
+text = "Tutorial"
+flat = true
 
 [node name="Button3" type="Button" parent="TextureRect" unique_id=1688201450]
 layout_mode = 0
-offset_left = 588.09534
-offset_top = 844.3441
-offset_right = 652.09534
-offset_bottom = 875.3441
-text = "decline"
+offset_left = 582.992
+offset_top = 798.04626
+offset_right = 703.992
+offset_bottom = 854.04626
+theme_override_colors/font_color = Color(0.68235296, 0.47058824, 0, 1)
+theme_override_fonts/font = ExtResource("4_pyl7j")
+theme_override_font_sizes/font_size = 40
+text = "Decline"
+flat = true
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=1868780946]
+layout_mode = 0
+offset_left = 339.1953
+offset_top = 457.70297
+offset_right = 1102.1953
+offset_bottom = 602.703
+theme_override_colors/font_color = Color(0.68235296, 0.47058824, 0, 1)
+theme_override_fonts/font = ExtResource("3_p6dhs")
+theme_override_font_sizes/font_size = 52
+text = "You've been cordially invited to"
+
+[node name="Label2" type="Label" parent="TextureRect" unique_id=1372533957]
+layout_mode = 0
+offset_left = 222.59694
+offset_top = 539.8548
+offset_right = 1118.5969
+offset_bottom = 626.8548
+theme_override_colors/font_color = Color(0.68235296, 0.47058824, 0, 1)
+theme_override_fonts/font = ExtResource("4_pyl7j")
+theme_override_font_sizes/font_size = 74
+text = "[Moonight's Masquerade Ball]"
 
 [connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="TextureRect/Button2" to="." method="_on_button_2_pressed"]

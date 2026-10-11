@@ -84,6 +84,7 @@ position_smoothing_speed = 10.0
 position = Vector2(296, 320)
 
 [node name="game over" type="Node2D" parent="." unique_id=1136412309]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="game over" unique_id=1439631605]
 offset_left = -8.0

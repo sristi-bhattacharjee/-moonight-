@@ -32,6 +32,7 @@ offset_top = 216.79657
 offset_right = 266.47064
 offset_bottom = 247.79657
 scale = Vector2(0.74319667, 0.70621115)
-text = "continue"
+text = "continue..."
+flat = true
 
 [connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]
