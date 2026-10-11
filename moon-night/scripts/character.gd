@@ -43,3 +43,30 @@ func try_move(direction: Vector2i) -> bool:
 	tween.tween_property(self, "global_position", target_position, 0.15)
 	tween.tween_callback(func(): is_moving = false)
 	return(true)
+
+func move_to_tile(target_tile: Vector2i) -> void:
+	grid_position = target_tile
+	is_moving = true
+
+	var target_position := tile_map.to_global(
+		tile_map.map_to_local(target_tile)
+	)
+
+	var tween := create_tween()
+	tween.tween_property(
+		self, "global_position", target_position, 0.15
+	)
+	tween.tween_callback(func(): is_moving = false)
+
+func animate_to_current_tile() -> void:
+	is_moving = true
+
+	var target_position := tile_map.to_global(
+		tile_map.map_to_local(grid_position)
+	)
+
+	var tween := create_tween()
+	tween.tween_property(
+		self, "global_position", target_position, 0.15
+	)
+	tween.tween_callback(func(): is_moving = false)
