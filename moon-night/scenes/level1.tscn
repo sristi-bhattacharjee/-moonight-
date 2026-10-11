@@ -300,22 +300,78 @@ tile_map_data = PackedByteArray("AAAHAP//AAABAAAAAAAHAAAAAAAAAAAAAAAHAAEAAAABAAA
 tile_set = SubResource("TileSet_6tghx")
 
 [node name="Decorations" type="Node2D" parent="." unique_id=193589612]
-visible = false
+z_index = -1
+position = Vector2(53.999996, -372.99997)
 scale = Vector2(1, 0.99999994)
 skew = 0.7853981
 
 [node name="Sprite2D" type="Sprite2D" parent="Decorations" unique_id=217991471]
-position = Vector2(433.99994, 353.55338)
+position = Vector2(432, 349.31073)
 rotation = -1.5707964
-scale = Vector2(0.059999995, 0.10392304)
+scale = Vector2(0.078, 0.104)
+skew = 0.95531666
+texture = ExtResource("5_mvsps")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Decorations" unique_id=1308929215]
+position = Vector2(688.7234, 46.3429)
+rotation = -1.5707964
+scale = Vector2(0.078, 0.104)
 skew = 0.95531666
 texture = ExtResource("5_mvsps")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Decorations" unique_id=59770840]
-position = Vector2(370.00003, 126.75234)
+position = Vector2(1009.1319, -241.15652)
 rotation = -1.5707964
-scale = Vector2(0.08406469, 0.10392304)
+scale = Vector2(0.078, 0.104)
 skew = 0.95531666
+texture = ExtResource("6_jvkml")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Decorations" unique_id=213605447]
+position = Vector2(688.72345, -42.752556)
+rotation = -1.5707964
+scale = Vector2(0.078, 0.104)
+skew = 0.95531666
+texture = ExtResource("6_jvkml")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Decorations" unique_id=1099744332]
+position = Vector2(1008.99994, -337.99695)
+rotation = -1.5707964
+scale = Vector2(0.078, 0.104)
+skew = 0.95531666
+texture = ExtResource("6_jvkml")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Decorations" unique_id=1300306879]
+position = Vector2(497.00003, 657.60944)
+rotation = -1.5707964
+scale = Vector2(0.078, 0.104)
+skew = 0.95531666
+texture = ExtResource("6_jvkml")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Decorations" unique_id=273585872]
+position = Vector2(751.00006, 274.35757)
+rotation = -1.5707964
+scale = Vector2(0.078, 0.104)
+skew = 0.95531666
+texture = ExtResource("6_jvkml")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Decorations" unique_id=987829902]
+position = Vector2(1009.00006, -432.74942)
+rotation = -1.5707964
+scale = Vector2(0.078, 0.104)
+skew = 0.95531666
+texture = ExtResource("6_jvkml")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Decorations" unique_id=1904273649]
+position = Vector2(1009.04315, -529.24207)
+rotation = -1.5707964
+scale = Vector2(0.078, 0.104)
+skew = 0.95531666
+texture = ExtResource("6_jvkml")
+
+[node name="Sprite2D10" type="Sprite2D" parent="." unique_id=631348440]
+position = Vector2(1638, -838)
+scale = Vector2(0.077999994, 0.060044434)
+skew = -0.017453292
 texture = ExtResource("6_jvkml")
 
 [node name="Player" parent="." unique_id=309696051 instance=ExtResource("7_3w4mx")]
@@ -438,6 +494,7 @@ text = "RETRY"
 flat = true
 
 [node name="Victory" type="Node2D" parent="Camera2D" unique_id=175244768]
+visible = false
 z_index = 2
 z_as_relative = false
 position = Vector2(-241, -163)
@@ -523,9 +580,6 @@ current_direction = 3
 [node name="EnemyPawn15" parent="." unique_id=1475415142 instance=ExtResource("8_u068y")]
 position = Vector2(1432, -493)
 current_direction = 3
-
-[node name="EnemyPawn16" parent="." unique_id=1449108223 instance=ExtResource("8_u068y")]
-position = Vector2(1626, -778)
 
 [node name="EnemyRook" parent="." unique_id=1018602222 instance=ExtResource("13_f31uk")]
 position = Vector2(1054, -375)
