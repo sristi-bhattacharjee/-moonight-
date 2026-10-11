@@ -64,8 +64,8 @@ func move_enemies() -> void:
 			gameover = true
 			switch = false
 			MainControl.frozen = true
-			_on_check_button_pressed()
-			return
+			
+			
 
 		
 		if tile_map.get_cell_source_id(destination) == -1:
@@ -122,6 +122,9 @@ func move_enemies() -> void:
 	# Animate it all at once
 	for enemy in accepted:
 		enemy.animate_to_current_tile()
+	if gameover:
+		await get_tree().create_timer(.75).timeout
+		_on_check_button_pressed()
 
 
 func _on_button_pressed() -> void:
