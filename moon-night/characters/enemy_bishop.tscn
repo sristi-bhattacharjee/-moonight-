@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ttj1ihd5l1iq"]
+
+[ext_resource type="Script" uid="uid://6yc0ior3jykr" path="res://characters/enemy_bishop.gd" id="1_0d2lb"]
+[ext_resource type="Texture2D" uid="uid://7jc1gtpg1i8q" path="res://assets/rook.webp" id="2_88lje"]
+
+[node name="EnemyBishop" type="Node2D" unique_id=423642881]
+script = ExtResource("1_0d2lb")
+current_direction = null
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1434532722]
+texture_filter = 1
+position = Vector2(4.7683716e-07, 0)
+scale = Vector2(0.7236842, 0.72777766)
+texture = ExtResource("2_88lje")

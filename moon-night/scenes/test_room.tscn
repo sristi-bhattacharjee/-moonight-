@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bn3jl5rc8ha3a" path="res://assets/diagonalchessboard.png" id="3_503t6"]
 [ext_resource type="PackedScene" uid="uid://bp5iegmlw4d3r" path="res://characters/enemy_pawn.tscn" id="4_vqwjj"]
 [ext_resource type="PackedScene" uid="uid://c1mrrbpu6jxd2" path="res://characters/enemy_rook.tscn" id="5_503t6"]
-[ext_resource type="PackedScene" uid="uid://ctkvavyojc67f" path="res://characters/enemy_vampire.tscn" id="7_sg3ht"]
+[ext_resource type="PackedScene" uid="uid://cee2rv3rkagr0" path="res://characters/enemy_vampire.tscn" id="7_sg3ht"]
 [ext_resource type="Texture2D" uid="uid://clu1xoe3w2p7c" path="res://assets/image.webp" id="8_jumof"]
 [ext_resource type="FontFile" uid="uid://ttpjsxxl73it" path="res://font/CloisterBlack.ttf" id="9_xsufa"]
 
@@ -114,13 +114,16 @@ position = Vector2(1065, -223)
 position = Vector2(924, -146)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=232544127]
+zoom = Vector2(4, 4)
 position_smoothing_speed = 10.0
 
 [node name="game over" type="Node2D" parent="Camera2D" unique_id=1136412309]
 visible = false
-position = Vector2(-480, -294.01)
+position = Vector2(-240, -147.005)
+scale = Vector2(0.5, 0.5)
 
 [node name="ColorRect" type="ColorRect" parent="Camera2D/game over" unique_id=1439631605]
+visible = false
 offset_left = -8.0
 offset_top = 8.000004
 offset_right = 608.0
@@ -168,10 +171,11 @@ text = "RETRY"
 flat = true
 
 [node name="Victory" type="Node2D" parent="Camera2D" unique_id=175244768]
-visible = false
-position = Vector2(-480, -294.01)
+position = Vector2(-240, -147.005)
+scale = Vector2(0.5, 0.5)
 
 [node name="ColorRect" type="ColorRect" parent="Camera2D/Victory" unique_id=214760811]
+visible = false
 offset_left = -8.0
 offset_top = 8.000004
 offset_right = 608.0

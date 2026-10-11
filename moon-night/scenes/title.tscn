@@ -5,14 +5,32 @@
 [ext_resource type="FontFile" uid="uid://b2gnsejg8ii2d" path="res://font/Runethia.otf" id="3_p6dhs"]
 [ext_resource type="FontFile" uid="uid://ttpjsxxl73it" path="res://font/CloisterBlack.ttf" id="4_pyl7j"]
 
-[node name="Title" type="Node2D" unique_id=1877606618]
+[node name="Title" type="Control" unique_id=2062483769]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -822.8572
+offset_bottom = -462.85718
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.75, 1.75)
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_wosw1")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1282974300]
-offset_top = -8.0
-offset_right = 1280.0
-offset_bottom = 896.0
-scale = Vector2(0.75472736, 0.68166476)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 188.55054
+offset_bottom = 286.85718
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.85334724, 0.6829052)
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture = ExtResource("1_4ignj")
 
 [node name="Button" type="Button" parent="TextureRect" unique_id=943618059]

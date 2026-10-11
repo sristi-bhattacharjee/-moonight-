@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var my_node: Node = $"Title"
 # Called when the node enters the scene tree for the first time.
