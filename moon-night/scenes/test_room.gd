@@ -56,7 +56,7 @@ func move_enemies() -> void:
 	for enemy in enemies:
 		var direction: Vector2i = enemy.choose_move()
 		var destination: Vector2i = enemy.grid_position + direction
-
+		#make it so that running into pawns doesn't kill you
 		if destination == MainControl.player.grid_position:
 			gameover = true
 			switch = false

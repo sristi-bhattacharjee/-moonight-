@@ -69,6 +69,7 @@ offset_bottom = 88.0
 
 [node name="EnemyPawn" parent="." unique_id=423642881 instance=ExtResource("4_vqwjj")]
 position = Vector2(296, 259)
+current_direction = 3
 
 [node name="EnemyPawn3" parent="." unique_id=1456335718 instance=ExtResource("4_vqwjj")]
 position = Vector2(351, 239)
