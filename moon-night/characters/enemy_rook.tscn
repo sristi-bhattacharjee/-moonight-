@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://c1mrrbpu6jxd2"]
 
 [ext_resource type="Script" uid="uid://bdypw7bxdpsjs" path="res://characters/enemy_rook.gd" id="1_xv0re"]
-[ext_resource type="Texture2D" uid="uid://dhjr83flwdfrx" path="res://assets/Untitled775_20261010180844.webp" id="2_xv0re"]
+[ext_resource type="Texture2D" uid="uid://7jc1gtpg1i8q" path="res://assets/rook.webp" id="2_xv0re"]
 
 [node name="EnemyRook" type="Node2D" unique_id=423642881]
 script = ExtResource("1_xv0re")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1434532722]
 texture_filter = 1
-position = Vector2(4.7683716e-07, 0)
+position = Vector2(6.018531e-36, -24)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_xv0re")

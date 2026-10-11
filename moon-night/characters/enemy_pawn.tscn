@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://bp5iegmlw4d3r"]
 
-[ext_resource type="Texture2D" uid="uid://8cimwta6dwv6" path="res://assets/pawntemp.png" id="1_cqpah"]
 [ext_resource type="Script" uid="uid://d02messnc3361" path="res://scripts/pawn.gd" id="1_ujcd6"]
+[ext_resource type="Texture2D" uid="uid://ctj87bw4t3i2l" path="res://assets/pawn1.webp" id="2_ujcd6"]
 
 [node name="EnemyPawn" type="Node2D" unique_id=423642881]
 script = ExtResource("1_ujcd6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1434532722]
 texture_filter = 1
-position = Vector2(0, -10)
-texture = ExtResource("1_cqpah")
+position = Vector2(7.9999995, -23.999998)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_ujcd6")

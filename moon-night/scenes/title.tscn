@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cqhhtinohw7ws"]
 
-[ext_resource type="Texture2D" uid="uid://be6pvvfkmgl51" path="res://assets/Untitled_Artwork.webp" id="1_4ignj"]
+[ext_resource type="Texture2D" uid="uid://be6pvvfkmgl51" path="res://assets/title.webp" id="1_4ignj"]
 [ext_resource type="Script" uid="uid://c5twbgqkgv4or" path="res://scenes/title.gd" id="1_wosw1"]
 [ext_resource type="FontFile" uid="uid://b2gnsejg8ii2d" path="res://font/Runethia.otf" id="3_p6dhs"]
 [ext_resource type="FontFile" uid="uid://ttpjsxxl73it" path="res://font/CloisterBlack.ttf" id="4_pyl7j"]

@@ -1,12 +1,13 @@
-[gd_scene format=3 uid="uid://cee2rv3rkagr0"]
+[gd_scene format=3 uid="uid://ctkvavyojc67f"]
 
 [ext_resource type="Script" uid="uid://uycmcu66a3nw" path="res://characters/enemy_vampire.gd" id="1_gid14"]
-[ext_resource type="Texture2D" uid="uid://c2sgi5wycy6ui" path="res://assets/vampire.png" id="2_gid14"]
+[ext_resource type="Texture2D" uid="uid://djix68bdwv0m5" path="res://assets/vamp.webp" id="2_gid14"]
 
 [node name="EnemyVampire" type="Node2D" unique_id=423642881]
 script = ExtResource("1_gid14")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1434532722]
 texture_filter = 1
-position = Vector2(0, -10)
+position = Vector2(0.99999994, -23.999996)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_gid14")

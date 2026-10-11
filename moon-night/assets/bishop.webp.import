@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be6pvvfkmgl51"
-path="res://.godot/imported/Untitled_Artwork.webp-c1f7446b699ebe3d45893903032086c1.ctex"
+uid="uid://bq6vt763wdcbt"
+path="res://.godot/imported/bishop.webp-aef0d9e8b3b93ef887d2ed674bc33510.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Untitled_Artwork.webp"
-dest_files=["res://.godot/imported/Untitled_Artwork.webp-c1f7446b699ebe3d45893903032086c1.ctex"]
+source_file="res://assets/bishop.webp"
+dest_files=["res://.godot/imported/bishop.webp-aef0d9e8b3b93ef887d2ed674bc33510.ctex"]
 
 [params]
 

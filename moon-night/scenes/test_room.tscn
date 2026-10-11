@@ -105,7 +105,7 @@ position = Vector2(236, 258)
 position = Vector2(341, 282)
 
 [node name="EnemyRook" parent="." unique_id=1337431958 instance=ExtResource("5_503t6")]
-position = Vector2(876, -222)
+position = Vector2(696, 56)
 
 [node name="EnemyRook2" parent="." unique_id=1081792030 instance=ExtResource("5_503t6")]
 position = Vector2(1065, -223)
@@ -117,6 +117,7 @@ position = Vector2(924, -146)
 position_smoothing_speed = 10.0
 
 [node name="game over" type="Node2D" parent="Camera2D" unique_id=1136412309]
+visible = false
 position = Vector2(-480, -294.01)
 
 [node name="ColorRect" type="ColorRect" parent="Camera2D/game over" unique_id=1439631605]
