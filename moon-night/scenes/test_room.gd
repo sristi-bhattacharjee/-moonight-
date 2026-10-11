@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 	label.text = readout
 	
 	camera_2d.position.y = player.position.y
-	
+	camera_2d.position.x = player.position.x
 
 #button -> game over
 
