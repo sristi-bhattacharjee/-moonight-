@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://bq4e63psucpux"]
+
+[ext_resource type="Texture2D" uid="uid://cxdh52hstpg5m" path="res://assets/tut2.webp" id="1_4yw2n"]
+[ext_resource type="Script" uid="uid://c3yk2q8ex80uv" path="res://scenes/tut_2.gd" id="1_38ded"]
+[ext_resource type="FontFile" uid="uid://coc8gh1opj58j" path="res://font/HellghostRough-Regular.ttf" id="2_bppha"]
+[ext_resource type="AudioStream" uid="uid://cdb5afpqbf6m8" path="res://music/montogoronto-ominousdark-medievalfantasy-song-309510.mp3" id="4_iqt7a"]
+
+[node name="Tut2" type="Node2D" unique_id=802892696]
+script = ExtResource("1_38ded")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=652427234]
+offset_right = 1976.0
+offset_bottom = 1192.0
+scale = Vector2(0.9723343, 1.0043111)
+texture = ExtResource("1_4yw2n")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=442056882]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 472.0
+offset_right = 664.0
+offset_bottom = 583.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bppha")
+theme_override_font_sizes/font_size = 21
+text = "Pawn: moves either up and down or side to side. will catch you if
+ you're diagonal to it
+"
+uppercase = true
+
+[node name="Label4" type="Label" parent="TextureRect" unique_id=2031828353]
+layout_mode = 0
+offset_left = 131.64207
+offset_top = 1051.467
+offset_right = 659.6421
+offset_bottom = 1162.467
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bppha")
+theme_override_font_sizes/font_size = 21
+text = "Pawn: moves either up and down or side to side. will catch you if
+ you're diagonal to it
+"
+uppercase = true
+
+[node name="Label2" type="Label" parent="TextureRect" unique_id=1218445167]
+layout_mode = 0
+offset_left = 740.4861
+offset_top = 469.9739
+offset_right = 1268.4861
+offset_bottom = 580.9739
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bppha")
+theme_override_font_sizes/font_size = 21
+text = "Rook: Moves a long distance in a straight line, switches its direction
+ each time
+"
+uppercase = true
+
+[node name="Label3" type="Label" parent="TextureRect" unique_id=488538806]
+layout_mode = 0
+offset_left = 1332.8749
+offset_top = 469.9739
+offset_right = 1860.8749
+offset_bottom = 580.9739
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bppha")
+theme_override_font_sizes/font_size = 21
+text = "Bishop: Moves a long distance in a diagonal line, switches its direction
+ each time"
+uppercase = true
+
+[node name="Label5" type="Label" parent="TextureRect" unique_id=190226019]
+layout_mode = 0
+offset_left = 732.2584
+offset_top = 1051.467
+offset_right = 1260.2584
+offset_bottom = 1162.467
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bppha")
+theme_override_font_sizes/font_size = 21
+text = "Pawn: moves either up and down or side to side. will catch you if
+ you're diagonal to it
+"
+uppercase = true
+
+[node name="Label6" type="Label" parent="TextureRect" unique_id=625909363]
+layout_mode = 0
+offset_left = 1332.8749
+offset_top = 1051.467
+offset_right = 1860.8749
+offset_bottom = 1162.467
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bppha")
+theme_override_font_sizes/font_size = 21
+text = "Vampire: Will move one space in any direction, preferably away from
+ the player"
+uppercase = true
+
+[node name="Button" type="Button" parent="." unique_id=1912055312]
+offset_left = 1504.0
+offset_top = 72.0
+offset_right = 2032.0
+offset_bottom = 144.0
+scale = Vector2(0.89172226, 1.0964807)
+theme_override_colors/font_color = Color(0.9764706, 0.8862745, 0, 1)
+theme_override_fonts/font = ExtResource("2_bppha")
+theme_override_font_sizes/font_size = 60
+text = "cont'd"
+flat = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=112131585]
+stream = ExtResource("4_iqt7a")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

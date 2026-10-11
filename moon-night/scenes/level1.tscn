@@ -8,10 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://bghve1tnc2o02" path="res://assets/singlewall.png" id="6_jvkml"]
 [ext_resource type="PackedScene" uid="uid://cscco751jr4pm" path="res://characters/player.tscn" id="7_3w4mx"]
 [ext_resource type="PackedScene" uid="uid://bp5iegmlw4d3r" path="res://characters/enemy_pawn.tscn" id="8_u068y"]
-[ext_resource type="PackedScene" uid="uid://cee2rv3rkagr0" path="res://characters/enemy_vampire.tscn" id="10_ai3nx"]
+[ext_resource type="PackedScene" uid="uid://ctkvavyojc67f" path="res://characters/enemy_vampire.tscn" id="10_ai3nx"]
 [ext_resource type="Texture2D" uid="uid://brg173y7fn0p4" path="res://assets/fancy-6lhrf9qwakc4p2g2.webp" id="12_3oqy1"]
 [ext_resource type="PackedScene" uid="uid://c1mrrbpu6jxd2" path="res://characters/enemy_rook.tscn" id="13_f31uk"]
-[ext_resource type="Texture2D" path="res://assets/image.webp" id="13_mq0oc"]
+[ext_resource type="AudioStream" uid="uid://del0221npbc6r" path="res://music/ivan_luzan-halloween-waltz-173164.mp3" id="13_gnai3"]
 [ext_resource type="FontFile" uid="uid://ttpjsxxl73it" path="res://font/CloisterBlack.ttf" id="14_msy1c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vqwjj"]
@@ -397,7 +397,6 @@ offset_left = -16.0
 offset_top = -25.98999
 offset_right = 984.0
 offset_bottom = 612.02
-texture = ExtResource("13_mq0oc")
 
 [node name="Label" type="Label" parent="Camera2D/game over/TextureRect" unique_id=1674221726]
 layout_mode = 0
@@ -521,6 +520,11 @@ current_direction = 0
 
 [node name="EnemyRook2" parent="." unique_id=2094388363 instance=ExtResource("13_f31uk")]
 position = Vector2(671, -245)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=192567658]
+stream = ExtResource("13_gnai3")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
 [connection signal="pressed" from="Camera2D/game over/TextureRect/Button2" to="." method="_on_button_2_pressed"]
