@@ -65,10 +65,11 @@ metadata/_edit_use_anchors_ = true
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="game over" unique_id=1439631605]
-offset_left = 32.0
-offset_top = 48.0
-offset_right = 648.0
-offset_bottom = 496.0
+offset_left = -8.0
+offset_top = 8.000004
+offset_right = 608.0
+offset_bottom = 456.0
+scale = Vector2(1.6238722, 1.3787202)
 color = Color(0.6886413, 0.12828916, 0, 1)
 
 [node name="Label" type="Label" parent="game over/ColorRect" unique_id=1674221726]
