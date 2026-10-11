@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c26bgv0pnqyyu" path="res://scenes/tutorial.gd" id="1_8ho6b"]
 [ext_resource type="Texture2D" uid="uid://bc27ucpi8twh6" path="res://assets/tut.webp" id="2_ph3nu"]
 [ext_resource type="FontFile" uid="uid://coc8gh1opj58j" path="res://font/HellghostRough-Regular.ttf" id="3_ph3nu"]
+[ext_resource type="AudioStream" uid="uid://cdb5afpqbf6m8" path="res://music/montogoronto-ominousdark-medievalfantasy-song-309510.mp3" id="4_4kmhl"]
 
 [node name="Tutorial" type="Control" unique_id=97381416]
 layout_mode = 3
@@ -26,33 +27,40 @@ expand_mode = 2
 
 [node name="Label" type="Label" parent="TextureRect" unique_id=1654157996]
 layout_mode = 0
-offset_left = 832.0
-offset_top = 128.0
-offset_right = 1388.0
-offset_bottom = 505.0
-scale = Vector2(2.56, 2.56)
+offset_left = 816.00006
+offset_top = 184.0
+offset_right = 1423.0
+offset_bottom = 591.0
+scale = Vector2(1.5864991, 1.8207408)
 theme_override_fonts/font = ExtResource("3_ph3nu")
-theme_override_font_sizes/font_size = 21
-text = "use arrow keys to move up, down, diagonally
-- every turn will make the other
- pieces move as well
-- if another piece moves onto
-your tile, your character dies
-- you are unable to move onto
- a tile with a piece other
- than the vampire
+theme_override_font_sizes/font_size = 23
+text = "- use arrow keys to move up, down, (hold shift and 
+press two arrow keys for diagonal)
+- every other turn will make the other pieces move
+ as well
+- if another piece moves onto your tile, your
+ character dies
+- you are unable to move onto a tile with a piece
+ other than the vampire
 - your objective is to kill the vampire by moving
  onto its tile"
 
 [node name="Button" type="Button" parent="TextureRect" unique_id=756509365]
 layout_mode = 0
-offset_left = 1688.0
-offset_top = 1120.0
-offset_right = 1778.0
-offset_bottom = 1151.0
+offset_left = 1544.0
+offset_top = 880.0
+offset_right = 1634.0
+offset_bottom = 911.0
 scale = Vector2(2.56, 2.56)
 theme_override_colors/font_color = Color(0.9764706, 0.8862745, 0, 1)
+theme_override_fonts/font = ExtResource("3_ph3nu")
+theme_override_font_sizes/font_size = 20
 text = "continue..."
 flat = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=198869820]
+stream = ExtResource("4_4kmhl")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]

@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://ttj1ihd5l1iq" path="res://characters/enemy_bishop.tscn" id="11_p0w5i"]
 [ext_resource type="Texture2D" uid="uid://brg173y7fn0p4" path="res://assets/fancy-6lhrf9qwakc4p2g2.webp" id="12_l3qxk"]
 [ext_resource type="Texture2D" uid="uid://dp5xqv2xkv6ym" path="res://assets/gameover.webp" id="13_l3qxk"]
+[ext_resource type="AudioStream" uid="uid://del0221npbc6r" path="res://music/ivan_luzan-halloween-waltz-173164.mp3" id="15_4bnm5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vqwjj"]
 texture = ExtResource("1_4adyp")
@@ -501,6 +502,11 @@ offset_top = 319.13654
 offset_right = 322.8838
 offset_bottom = 350.13654
 text = "QUIT"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=753243268]
+stream = ExtResource("15_4bnm5")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
 [connection signal="pressed" from="Camera2D/game over/TextureRect/Button2" to="." method="_on_button_2_pressed"]
