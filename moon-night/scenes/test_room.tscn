@@ -61,8 +61,29 @@ text = "Steps Left:
 "
 metadata/_edit_use_anchors_ = true
 
+[node name="CheckButton" type="CheckButton" parent="." unique_id=362309883]
+offset_left = 440.0
+offset_top = 64.0
+offset_right = 560.0
+offset_bottom = 88.0
+
+[node name="EnemyPawn" parent="." unique_id=423642881 instance=ExtResource("4_vqwjj")]
+position = Vector2(296, 259)
+
+[node name="EnemyPawn3" parent="." unique_id=1456335718 instance=ExtResource("4_vqwjj")]
+position = Vector2(351, 239)
+
+[node name="EnemyPawn4" parent="." unique_id=706990140 instance=ExtResource("4_vqwjj")]
+position = Vector2(331, 259)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=232544127]
+offset = Vector2(480, 0)
+position_smoothing_speed = 10.0
+
+[node name="EnemyRook" parent="." unique_id=1337431958 instance=ExtResource("5_503t6")]
+position = Vector2(296, 320)
+
 [node name="game over" type="Node2D" parent="." unique_id=1136412309]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="game over" unique_id=1439631605]
 offset_left = -8.0
@@ -87,38 +108,17 @@ offset_left = 264.0
 offset_top = 280.0
 offset_right = 320.0
 offset_bottom = 311.0
+scale = Vector2(1.1538681, 1)
 text = "RETRY"
 
 [node name="Button2" type="Button" parent="game over/ColorRect" unique_id=966837582]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 320.0
-offset_right = 319.0
-offset_bottom = 351.0
+offset_left = 275.8838
+offset_top = 319.13654
+offset_right = 322.8838
+offset_bottom = 350.13654
 text = "QUIT"
 
-[node name="CheckButton" type="CheckButton" parent="." unique_id=362309883]
-offset_left = 440.0
-offset_top = 64.0
-offset_right = 560.0
-offset_bottom = 88.0
-
-[node name="EnemyPawn" parent="." unique_id=423642881 instance=ExtResource("4_vqwjj")]
-position = Vector2(296, 259)
-
-[node name="EnemyPawn3" parent="." unique_id=1456335718 instance=ExtResource("4_vqwjj")]
-position = Vector2(351, 239)
-
-[node name="EnemyPawn4" parent="." unique_id=706990140 instance=ExtResource("4_vqwjj")]
-position = Vector2(331, 259)
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=232544127]
-offset = Vector2(480, 0)
-position_smoothing_speed = 10.0
-
-[node name="EnemyRook" parent="." unique_id=1337431958 instance=ExtResource("5_503t6")]
-position = Vector2(296, 320)
-
+[connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
 [connection signal="pressed" from="game over/ColorRect/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="game over/ColorRect/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]

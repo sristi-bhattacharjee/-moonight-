@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c1mrrbpu6jxd2"]
 
 [ext_resource type="Script" uid="uid://bdypw7bxdpsjs" path="res://characters/enemy_rook.gd" id="1_xv0re"]
-[ext_resource type="Texture2D" uid="uid://dr4uga3m8xo50" path="res://assets/rook.webp" id="2_xv0re"]
+[ext_resource type="Texture2D" uid="uid://g0xsj4jg1tas" path="res://assets/rook.webp" id="2_xv0re"]
 
 [node name="EnemyRook" type="Node2D" unique_id=423642881]
 script = ExtResource("1_xv0re")
