@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bn3jl5rc8ha3a" path="res://assets/diagonalchessboard.png" id="3_503t6"]
 [ext_resource type="PackedScene" uid="uid://bp5iegmlw4d3r" path="res://characters/enemy_pawn.tscn" id="4_vqwjj"]
 [ext_resource type="PackedScene" uid="uid://c1mrrbpu6jxd2" path="res://characters/enemy_rook.tscn" id="5_503t6"]
+[ext_resource type="PackedScene" uid="uid://ctkvavyojc67f" path="res://characters/enemy_vampire.tscn" id="7_sg3ht"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vqwjj"]
 texture = ExtResource("1_4adyp")
@@ -120,6 +121,9 @@ offset_top = 319.13654
 offset_right = 322.8838
 offset_bottom = 350.13654
 text = "QUIT"
+
+[node name="EnemyVampire" parent="." unique_id=439461791 instance=ExtResource("7_sg3ht")]
+position = Vector2(339, 218)
 
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
 [connection signal="pressed" from="game over/ColorRect/Button" to="." method="_on_button_pressed"]

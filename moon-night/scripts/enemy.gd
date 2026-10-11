@@ -12,7 +12,16 @@ enum Direction {
 @export var current_direction: Direction = Direction.DOWN
 
 var stored_dir: Vector2i = Vector2i.DOWN
-
+var movements = [
+	Vector2i.UP,
+	Vector2i.DOWN,
+	Vector2i.LEFT,
+	Vector2i.RIGHT,
+	Vector2i(1,1),
+	Vector2i(-1,-1),
+	Vector2i(1,-1),
+	Vector2i(-1,1)
+]
 
 func _ready() -> void:
 	super._ready()

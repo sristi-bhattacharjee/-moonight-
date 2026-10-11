@@ -70,3 +70,14 @@ func animate_to_current_tile() -> void:
 		self, "global_position", target_position, 0.15
 	)
 	tween.tween_callback(func(): is_moving = false)
+
+func get_surrounding_tiles():
+	var surrounding_tiles =[]
+	var target_tile
+	for y in 3:
+		for x in 3:
+			target_tile = grid_position + Vector2i(x - 1, y - 1)
+			if grid_position == target_tile:
+				continue
+			surrounding_tiles.append(target_tile)
+	return surrounding_tiles
