@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cee2rv3rkagr0" path="res://characters/enemy_vampire.tscn" id="10_ai3nx"]
 [ext_resource type="Texture2D" uid="uid://brg173y7fn0p4" path="res://assets/fancy-6lhrf9qwakc4p2g2.webp" id="12_3oqy1"]
 [ext_resource type="PackedScene" uid="uid://c1mrrbpu6jxd2" path="res://characters/enemy_rook.tscn" id="13_f31uk"]
-[ext_resource type="Texture2D" uid="uid://clu1xoe3w2p7c" path="res://assets/image.webp" id="13_mq0oc"]
+[ext_resource type="Texture2D" path="res://assets/image.webp" id="13_mq0oc"]
 [ext_resource type="FontFile" uid="uid://ttpjsxxl73it" path="res://font/CloisterBlack.ttf" id="14_msy1c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vqwjj"]
@@ -391,6 +391,7 @@ scale = Vector2(1.6238722, 1.3787202)
 color = Color(0, 0, 0, 1)
 
 [node name="TextureRect" type="TextureRect" parent="Camera2D/game over" unique_id=1397705770]
+z_index = 4
 texture_filter = 1
 offset_left = -16.0
 offset_top = -25.98999
@@ -512,7 +513,7 @@ position = Vector2(1432, -493)
 current_direction = 3
 
 [node name="EnemyPawn16" parent="." unique_id=1449108223 instance=ExtResource("8_u068y")]
-position = Vector2(1579, -742)
+position = Vector2(1626, -778)
 
 [node name="EnemyRook" parent="." unique_id=1018602222 instance=ExtResource("13_f31uk")]
 position = Vector2(1054, -375)
