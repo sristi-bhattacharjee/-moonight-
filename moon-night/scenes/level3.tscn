@@ -577,6 +577,18 @@ current_direction = 3
 position = Vector2(341, 121)
 current_direction = 1
 
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=531991511]
+z_index = -1
+position = Vector2(795, -316.99997)
+scale = Vector2(0.05999999, 0.059999995)
+texture = ExtResource("6_x008a")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1200682915]
+z_index = -1
+position = Vector2(566.00006, -340.00003)
+scale = Vector2(0.084064685, 0.059999995)
+texture = ExtResource("5_6uuvf")
+
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
 [connection signal="pressed" from="Camera2D/game over/TextureRect/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Camera2D/game over/TextureRect/Button" to="." method="_on_button_pressed"]
