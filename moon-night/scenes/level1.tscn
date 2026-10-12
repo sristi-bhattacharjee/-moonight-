@@ -349,7 +349,7 @@ skew = 0.95531666
 texture = ExtResource("6_jvkml")
 
 [node name="Sprite2D9" type="Sprite2D" parent="Decorations" unique_id=273585872]
-position = Vector2(751.00006, 274.35757)
+position = Vector2(753.1775, 272.68945)
 rotation = -1.5707964
 scale = Vector2(0.078, 0.104)
 skew = 0.95531666
@@ -422,9 +422,6 @@ current_direction = 3
 
 [node name="EnemyVampire" parent="." unique_id=439461791 instance=ExtResource("10_ai3nx")]
 position = Vector2(1583, -736)
-
-[node name="EnemyVampire2" parent="." unique_id=1844108624 instance=ExtResource("10_ai3nx")]
-position = Vector2(503, -114)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=232544127]
 zoom = Vector2(4, 4)
