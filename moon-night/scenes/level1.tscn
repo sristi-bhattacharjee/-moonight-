@@ -8,12 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://bghve1tnc2o02" path="res://assets/singlewall.png" id="6_jvkml"]
 [ext_resource type="PackedScene" uid="uid://cscco751jr4pm" path="res://characters/player.tscn" id="7_3w4mx"]
 [ext_resource type="PackedScene" uid="uid://bp5iegmlw4d3r" path="res://characters/enemy_pawn.tscn" id="8_u068y"]
-[ext_resource type="PackedScene" uid="uid://cee2rv3rkagr0" path="res://characters/enemy_vampire.tscn" id="10_ai3nx"]
+[ext_resource type="PackedScene" uid="uid://ctkvavyojc67f" path="res://characters/enemy_vampire.tscn" id="10_ai3nx"]
 [ext_resource type="Texture2D" uid="uid://dmpmy6ojcxd2f" path="res://assets/gameover.png" id="11_gnai3"]
 [ext_resource type="Texture2D" uid="uid://brg173y7fn0p4" path="res://assets/fancy-6lhrf9qwakc4p2g2.webp" id="12_3oqy1"]
 [ext_resource type="PackedScene" uid="uid://c1mrrbpu6jxd2" path="res://characters/enemy_rook.tscn" id="13_f31uk"]
 [ext_resource type="AudioStream" uid="uid://del0221npbc6r" path="res://music/ivan_luzan-halloween-waltz-173164.mp3" id="13_gnai3"]
 [ext_resource type="Texture2D" uid="uid://dqsssj635qb7w" path="res://assets/victory.png" id="13_i8kv5"]
+[ext_resource type="FontFile" uid="uid://coc8gh1opj58j" path="res://font/HellghostRough-Regular.ttf" id="14_dxn3v"]
 [ext_resource type="FontFile" uid="uid://ttpjsxxl73it" path="res://font/CloisterBlack.ttf" id="14_msy1c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vqwjj"]
@@ -494,7 +495,6 @@ text = "RETRY"
 flat = true
 
 [node name="Victory" type="Node2D" parent="Camera2D" unique_id=175244768]
-visible = false
 z_index = 2
 z_as_relative = false
 position = Vector2(-241, -163)
@@ -512,7 +512,9 @@ offset_left = 216.0
 offset_top = 50.771744
 offset_right = 376.0
 offset_bottom = 89.77174
-theme_override_font_sizes/font_size = 28
+theme_override_colors/font_color = Color(0.99997944, 0.98449713, 0.9818507, 1)
+theme_override_fonts/font = ExtResource("14_msy1c")
+theme_override_font_sizes/font_size = 33
 text = "VICTORY"
 horizontal_alignment = 1
 
@@ -523,7 +525,9 @@ offset_top = 226.29683
 offset_right = 487.50085
 offset_bottom = 257.2968
 scale = Vector2(1.1538681, 1)
+theme_override_fonts/font = ExtResource("14_dxn3v")
 text = "RETRY"
+flat = true
 
 [node name="Button3" type="Button" parent="Camera2D/Victory/TextureRect" unique_id=1731708732]
 layout_mode = 0
@@ -532,7 +536,9 @@ offset_top = 181.32759
 offset_right = 506.89917
 offset_bottom = 212.32759
 scale = Vector2(1.1538681, 1)
+theme_override_fonts/font = ExtResource("14_dxn3v")
 text = "NEXT LEVEL"
+flat = true
 
 [node name="Button2" type="Button" parent="Camera2D/Victory/TextureRect" unique_id=615431992]
 layout_mode = 0
@@ -540,7 +546,9 @@ offset_left = 443.38464
 offset_top = 269.81543
 offset_right = 490.38464
 offset_bottom = 300.81543
+theme_override_fonts/font = ExtResource("14_dxn3v")
 text = "QUIT"
+flat = true
 
 [node name="EnemyPawn6" parent="." unique_id=147716519 instance=ExtResource("8_u068y")]
 position = Vector2(1073, -334)

@@ -8,9 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://cj1bill4symie" path="res://assets/wall.png" id="6_x008a"]
 [ext_resource type="PackedScene" uid="uid://cscco751jr4pm" path="res://characters/player.tscn" id="7_atr84"]
 [ext_resource type="PackedScene" uid="uid://bp5iegmlw4d3r" path="res://characters/enemy_pawn.tscn" id="8_qyu38"]
-[ext_resource type="PackedScene" uid="uid://cee2rv3rkagr0" path="res://characters/enemy_vampire.tscn" id="9_8vbrh"]
+[ext_resource type="PackedScene" uid="uid://ctkvavyojc67f" path="res://characters/enemy_vampire.tscn" id="9_8vbrh"]
 [ext_resource type="Texture2D" uid="uid://brg173y7fn0p4" path="res://assets/fancy-6lhrf9qwakc4p2g2.webp" id="10_d5gix"]
 [ext_resource type="Texture2D" uid="uid://dmpmy6ojcxd2f" path="res://assets/gameover.png" id="11_7hs6g"]
+[ext_resource type="FontFile" uid="uid://coc8gh1opj58j" path="res://font/HellghostRough-Regular.ttf" id="12_s4dsi"]
 [ext_resource type="FontFile" uid="uid://ttpjsxxl73it" path="res://font/CloisterBlack.ttf" id="12_yeq8b"]
 [ext_resource type="Texture2D" uid="uid://dqsssj635qb7w" path="res://assets/victory.png" id="13_invaa"]
 [ext_resource type="PackedScene" uid="uid://c1mrrbpu6jxd2" path="res://characters/enemy_rook.tscn" id="14_88b2t"]
@@ -461,26 +462,31 @@ offset_left = 216.0
 offset_top = 50.771744
 offset_right = 376.0
 offset_bottom = 89.77174
+theme_override_fonts/font = ExtResource("12_yeq8b")
 theme_override_font_sizes/font_size = 28
 text = "VICTORY"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="Camera2D/Victory/TextureRect" unique_id=1580864653]
 layout_mode = 0
-offset_left = 264.79916
-offset_top = 353.95145
-offset_right = 320.79916
-offset_bottom = 384.95145
+offset_left = 434.76328
+offset_top = 201.63626
+offset_right = 490.76328
+offset_bottom = 232.63626
 scale = Vector2(1.1538681, 1)
+theme_override_fonts/font = ExtResource("12_s4dsi")
 text = "RETRY"
+flat = true
 
 [node name="Button2" type="Button" parent="Camera2D/Victory/TextureRect" unique_id=615431992]
 layout_mode = 0
-offset_left = 276.68295
-offset_top = 390.21698
-offset_right = 323.68295
-offset_bottom = 421.21698
+offset_left = 444.61627
+offset_top = 248.05615
+offset_right = 491.61627
+offset_bottom = 279.05615
+theme_override_fonts/font = ExtResource("12_s4dsi")
 text = "QUIT"
+flat = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=192567658]
 stream = ExtResource("15_0ydwj")
