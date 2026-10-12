@@ -303,13 +303,12 @@ tile_map_data = PackedByteArray("AAAHAAQAAAABAAAAAAAHAAUAAAAAAAAAAAAHAAYAAAABAAA
 tile_set = SubResource("TileSet_6tghx")
 
 [node name="Decorations" type="Node2D" parent="." unique_id=193589612]
-visible = false
 scale = Vector2(1, 0.99999994)
 skew = 0.7853981
 
 [node name="Sprite2D2" type="Sprite2D" parent="Decorations" unique_id=59770840]
 z_index = -1
-position = Vector2(-301.99072, -365.26807)
+position = Vector2(370, 63.63961)
 rotation = -1.5707964
 scale = Vector2(0.08406469, 0.10392304)
 skew = 0.95531666
@@ -317,34 +316,40 @@ texture = ExtResource("5_6uuvf")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Decorations" unique_id=1067147528]
 z_index = -1
-position = Vector2(-396.99994, -127.279175)
+position = Vector2(-78.00006, -131.52187)
 rotation = -1.5707964
 scale = Vector2(0.08406469, 0.10392304)
 skew = 0.95531666
 texture = ExtResource("5_6uuvf")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=217991471]
-visible = false
-position = Vector2(623, -317)
-scale = Vector2(0.05999999, 0.059999995)
+[node name="Sprite2D5" type="Sprite2D" parent="Decorations" unique_id=942398633]
+position = Vector2(-141.82263, 113.72266)
+rotation = -1.5707964
+scale = Vector2(0.078, 0.104)
+skew = 0.95531666
 texture = ExtResource("6_x008a")
 
-[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1294170821]
-visible = false
-position = Vector2(-38.99994, 22.00003)
-scale = Vector2(0.05999999, 0.059999995)
+[node name="Sprite2D8" type="Sprite2D" parent="Decorations" unique_id=1787645819]
+z_index = -1
+position = Vector2(434.00003, -111.72284)
+rotation = -1.5707964
+scale = Vector2(0.078, 0.104)
+skew = 0.95531666
 texture = ExtResource("6_x008a")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1286241381]
-visible = false
-position = Vector2(452, -340)
-scale = Vector2(0.05999999, 0.059999995)
+[node name="Sprite2D6" type="Sprite2D" parent="Decorations" unique_id=1693169502]
+position = Vector2(-141.82263, 113.72266)
+rotation = -1.5707964
+scale = Vector2(0.078, 0.104)
+skew = 0.95531666
 texture = ExtResource("6_x008a")
 
-[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=930744801]
-visible = false
-position = Vector2(256, -317)
-scale = Vector2(0.05999999, 0.059999995)
+[node name="Sprite2D7" type="Sprite2D" parent="Decorations" unique_id=1315800879]
+z_index = -1
+position = Vector2(-142.99997, -369.10974)
+rotation = -1.5707964
+scale = Vector2(0.078, 0.104)
+skew = 0.95531666
 texture = ExtResource("6_x008a")
 
 [node name="Player" parent="." unique_id=309696051 instance=ExtResource("7_atr84")]
