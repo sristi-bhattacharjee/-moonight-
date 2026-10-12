@@ -438,7 +438,6 @@ scale = Vector2(0.77, 0.77)
 texture = ExtResource("12_3oqy1")
 
 [node name="game over" type="Node2D" parent="Camera2D" unique_id=1136412309]
-visible = false
 z_index = 1
 position = Vector2(-240, -147.005)
 scale = Vector2(0.5, 0.5)
@@ -475,11 +474,13 @@ text = "GAME OVER"
 
 [node name="Button2" type="Button" parent="Camera2D/game over/TextureRect" unique_id=966837582]
 layout_mode = 0
-offset_left = 488.0
-offset_top = 440.0
-offset_right = 543.0
-offset_bottom = 471.0
+offset_left = 480.0
+offset_top = 432.0
+offset_right = 535.0
+offset_bottom = 480.0
 theme_override_colors/font_color = Color(0.6666667, 0.007843138, 0.007843138, 1)
+theme_override_fonts/font = ExtResource("14_dxn3v")
+theme_override_font_sizes/font_size = 25
 text = "QUIT"
 flat = true
 
@@ -491,10 +492,13 @@ offset_right = 536.0
 offset_bottom = 423.0
 scale = Vector2(1.1538681, 1)
 theme_override_colors/font_color = Color(0.6666667, 0.007843138, 0.007843138, 1)
+theme_override_fonts/font = ExtResource("14_dxn3v")
+theme_override_font_sizes/font_size = 25
 text = "RETRY"
 flat = true
 
 [node name="Victory" type="Node2D" parent="Camera2D" unique_id=175244768]
+visible = false
 z_index = 2
 z_as_relative = false
 position = Vector2(-241, -163)
